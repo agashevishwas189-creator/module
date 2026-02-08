@@ -1,7 +1,7 @@
 resource "aws_instance" "web_server" {
     ami = var.ami_webserver
     instance_type = var.instance_type
-    vpc_security_group_ids = [var.vpc_security_group_id , aws_security_group.my-web-sg.id]
+    #vpc_security_group_ids = [var.vpc_security_group_id , aws_security_group.my-web-sg.id]
     subnet_id = var.ec2_instance_subnet_id
 
   tags = {
