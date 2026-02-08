@@ -1,6 +1,6 @@
 variable "ami_server" {
     type = string
-    default = "ami-04233b5aecce09244"
+    default = "ami-0ff5003538b60d5ec "
 
 }
 
