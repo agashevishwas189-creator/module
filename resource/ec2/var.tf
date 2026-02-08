@@ -10,11 +10,11 @@ variable "instance_type" {
   
 }
 
-variable "vpc_security_group_id" {
+#variable "vpc_security_group_id" {
   type = string
   
     
-}
+#}
 variable "ec2_instance_subnet_id" {
     type = string
   
