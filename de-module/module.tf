@@ -1,8 +1,8 @@
-module "name" {
+module "ec2" {
   source = "root/module/resource/ec2"
   ami_webserver = "ami-0c55b159cbfafe1d0"
   instance_type = "t3.micro"
-  vpc_security_group_id = "sg-0c78535db3865697a"
+  vpc_security_group_id = ["sg-0c78535db3865697a" ,module.vpc.aws_security_group_id]
   ec2_instance_subnet_id = module.vpc.aws_subnet_id
 
 }
