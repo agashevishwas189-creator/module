@@ -5,12 +5,11 @@ provider "aws" {
 }
 
  terraform  {
-        required_version = ">= 0.12" {
         backend "s3" {
         bucket = "learning-dem-1"
         key = "terraform.tfstate"
-        dynamodb_table = "vishwas"
-        region = ap-south-1
+        dynamodb_table = "vishwas"  #or can use use_lockfile = true
+        region = "ap-south-1"
         profile = "configs"
         shared_credentials_files  = ["/root/.aws/credentials"]
     }
